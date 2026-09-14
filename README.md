@@ -222,6 +222,7 @@ Registros de prueba que trae `hotel.db`:
 |---|---|---|---|
 | 1 | María Fernández Ríos | maria.fernandez@correo.com | 3104567890 |
 | 2 | Andrés Gómez | andres.gomez@correo.com | 3009876543 |
+| 3 | Juan carlos Ramirez Herrera | juancarlosramirezherrera985@gmail.com | 3154887128 |
 
 **reservas**
 
@@ -229,9 +230,67 @@ Registros de prueba que trae `hotel.db`:
 |---|---|---|---|---|
 | 1 | 1 | 2026-10-05 | 3 | 2 |
 | 2 | 2 | 2026-11-12 | 5 | 4 |
+| 3 | 3 | 2026-09-14 | 2 | 12 |
 
 ## Capturas
 
-Pendiente: agregar las capturas de las cuatro páginas, del número de huésped
-generado, de los dos mensajes de confirmación, de la terminal y de las dos
-tablas abiertas en un programa para ver bases de datos SQLite.
+Las capturas siguen el orden pedido en la práctica: las cuatro páginas, el ID
+generado, los dos mensajes de confirmación, la terminal y las dos tablas.
+
+### 1. Las cuatro páginas
+
+Página principal (`GET /`):
+
+![Página principal](capturas/01-inicio.png)
+
+Página Acerca de (`GET /acerca`):
+
+![Página acerca de](capturas/02-acerca.png)
+
+Página Registro (`GET /registro`), con el formulario de la primera tabla:
+
+![Página de registro](capturas/03-registro.png)
+
+Página Servicios (`GET /servicios`), con los servicios y las tarifas:
+
+![Página de servicios](capturas/04-servicios.png)
+
+Parte de abajo de la misma página, con el formulario de reserva. Solo pide el
+número de huésped y los datos de la operación, no repite el nombre, el correo
+ni el teléfono:
+
+![Formulario de reserva](capturas/05-servicios-formulario.png)
+
+### 2. ID generado y primer mensaje de confirmación
+
+Respuesta del `POST /huespedes`. El registro se guardó en la tabla
+`huespedes` y la página muestra el identificador que generó SQLite con
+`lastInsertRowid`, en este caso el número 3:
+
+![Número de huésped generado](capturas/06-registro-id-generado.png)
+
+### 3. Segundo mensaje de confirmación
+
+Respuesta del `POST /reservas`. La reserva quedó guardada en la segunda tabla
+usando el número de huésped anterior:
+
+![Confirmación de la reserva](capturas/07-reserva-confirmada.png)
+
+### 4. Terminal
+
+Salida del servidor durante ese recorrido. Se ven las peticiones `GET`,
+la petición independiente a `/styles.css`, los datos recibidos en cada `POST`
+y los dos identificadores generados:
+
+![Salida de la terminal](capturas/08-terminal.png)
+
+### 5. Las dos tablas en SQLite
+
+Tabla `huespedes`, con los tres registros y su identificador:
+
+![Tabla huespedes](capturas/09-tabla-huespedes.png)
+
+Tabla `reservas`. La columna `huesped_id` guarda el identificador de la
+primera tabla y no repite los datos personales:
+
+![Tabla reservas](capturas/10-tabla-reservas.png)
