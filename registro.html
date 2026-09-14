@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <title>Registro - Hotel Las Palmas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Registro de huésped</h1>
+        <p>Primer paso antes de pedir una reserva</p>
+    </header>
+    <nav>
+        <a href="/">Inicio</a>
+        <a href="/acerca">Acerca de</a>
+        <a href="/registro">Registro</a>
+        <a href="/servicios">Servicios</a>
+    </nav>
+    <main>
+        <section>
+            <h2>Complete sus datos</h2>
+            <p>
+                Al enviar el formulario el sistema le asigna un número de
+                huésped. Guárdelo, porque se necesita para registrar la
+                reserva en la página de servicios.
+            </p>
+
+            <form action="/huespedes" method="POST">
+                <label for="nombre">Nombre completo:</label>
+                <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    required
+                >
+
+                <label for="correo">Correo electrónico:</label>
+                <input
+                    type="email"
+                    id="correo"
+                    name="correo"
+                    required
+                >
+
+                <label for="telefono">Teléfono:</label>
+                <input
+                    type="text"
+                    id="telefono"
+                    name="telefono"
+                    required
+                >
+
+                <button type="submit">Registrarme</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Hotel Las Palmas &middot; Ingeniería Web &middot; Universidad Cooperativa de Colombia</p>
+    </footer>
+</body>
+</html>

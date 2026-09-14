@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <title>Servicios - Hotel Las Palmas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Servicios</h1>
+        <p>Lo que incluye la estadía y solicitud de reserva</p>
+    </header>
+    <nav>
+        <a href="/">Inicio</a>
+        <a href="/acerca">Acerca de</a>
+        <a href="/registro">Registro</a>
+        <a href="/servicios">Servicios</a>
+    </nav>
+    <main>
+        <section>
+            <h2>Servicios del hotel</h2>
+            <ul>
+                <li>Desayuno incluido de 6:00 a 9:00 de la mañana.</li>
+                <li>Wifi gratuito en habitaciones y zonas comunes.</li>
+                <li>Parqueadero cubierto para los huéspedes.</li>
+                <li>Servicio de lavandería con costo adicional.</li>
+                <li>Recepción abierta las 24 horas.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Tarifas por noche</h2>
+            <table>
+                <tr>
+                    <th>Habitación</th>
+                    <th>Capacidad</th>
+                    <th>Valor</th>
+                </tr>
+                <tr>
+                    <td>Sencilla</td>
+                    <td>1 persona</td>
+                    <td>$ 120.000</td>
+                </tr>
+                <tr>
+                    <td>Doble</td>
+                    <td>2 personas</td>
+                    <td>$ 180.000</td>
+                </tr>
+                <tr>
+                    <td>Familiar</td>
+                    <td>4 personas</td>
+                    <td>$ 260.000</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="aviso">
+            <h2>Solicitar una reserva</h2>
+            <p>
+                Para usar este formulario necesita el número de huésped que le
+                entregó la página de <a href="/registro">Registro</a>. Aquí no
+                se piden otra vez el nombre, el correo ni el teléfono porque
+                esos datos ya quedaron guardados.
+            </p>
+
+            <form action="/reservas" method="POST">
+                <label for="huesped_id">Número de huésped:</label>
+                <input
+                    type="number"
+                    id="huesped_id"
+                    name="huesped_id"
+                    min="1"
+                    required
+                >
+
+                <label for="fecha_ingreso">Fecha de ingreso:</label>
+                <input
+                    type="date"
+                    id="fecha_ingreso"
+                    name="fecha_ingreso"
+                    required
+                >
+
+                <label for="noches">Número de noches:</label>
+                <input
+                    type="number"
+                    id="noches"
+                    name="noches"
+                    min="1"
+                    required
+                >
+
+                <label for="personas">Número de personas:</label>
+                <input
+                    type="number"
+                    id="personas"
+                    name="personas"
+                    min="1"
+                    required
+                >
+
+                <button type="submit">Reservar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Hotel Las Palmas &middot; Ingeniería Web &middot; Universidad Cooperativa de Colombia</p>
+    </footer>
+</body>
+</html>
