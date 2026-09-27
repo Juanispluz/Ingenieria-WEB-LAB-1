@@ -1,0 +1,19 @@
+%% OOHDM 1 - Diseno conceptual - Hotel Las Palmas
+%% Fuente editable del diagrama 01_modelo_conceptual.svg
+classDiagram
+    class Huesped {
+        id : INTEGER
+        nombre : TEXT
+        correo : TEXT
+        telefono : TEXT
+    }
+
+    class Reserva {
+        id : INTEGER
+        huesped_id : INTEGER
+        fecha_ingreso : TEXT
+        noches : INTEGER
+        personas : INTEGER
+    }
+
+    Huesped "1" --> "0..*" Reserva : solicita

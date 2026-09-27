@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1070" height="750" viewBox="0 0 1070 750">
+<defs>
+<marker id="pf" markerWidth="9" markerHeight="9" refX="8.5" refY="4.5" orient="auto" markerUnits="userSpaceOnUse">
+<path d="M0,0 L9,4.5 L0,9 z" fill="#444444"/>
+</marker>
+</defs>
+<rect x="0" y="0" width="1070" height="750" fill="#ffffff"/>
+<text x="535.0" y="32" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" fill="#1a1a1a" xml:space="preserve" text-anchor="middle">OOHDM · 3. Diseño de interfaz abstracta — Hotel Las Palmas</text>
+<text x="535.0" y="54" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#555555" xml:space="preserve" text-anchor="middle">¿Qué información, controles y respuestas contiene cada nodo?</text>
+<rect x="50" y="80" width="20" height="14" rx="0" fill="#ffffff" stroke="#444444" stroke-width="1.1"/>
+<text x="77" y="91" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="normal" fill="#555555" xml:space="preserve" text-anchor="start">Información visible</text>
+<rect x="255" y="80" width="20" height="14" rx="0" fill="#f4f4f4" stroke="#444444" stroke-width="1.1"/>
+<text x="282" y="91" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="normal" fill="#555555" xml:space="preserve" text-anchor="start">Campo de entrada</text>
+<rect x="450" y="80" width="20" height="14" rx="0" fill="#ffffff" stroke="#444444" stroke-width="1.1" stroke-dasharray="4 3"/>
+<text x="477" y="91" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="normal" fill="#555555" xml:space="preserve" text-anchor="start">Dato conservado</text>
+<rect x="645" y="80" width="20" height="14" rx="0" fill="#3a3a3a" stroke="#444444" stroke-width="1.1"/>
+<text x="672" y="91" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="normal" fill="#555555" xml:space="preserve" text-anchor="start">Botón / evento</text>
+<rect x="835" y="80" width="20" height="14" rx="0" fill="#e6e6e6" stroke="#444444" stroke-width="1.1"/>
+<text x="862" y="91" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="normal" fill="#555555" xml:space="preserve" text-anchor="start">Respuesta del sistema</text>
+<rect x="40" y="120" width="470" height="408" rx="0" fill="#ffffff" stroke="#444444" stroke-width="1.1"/>
+<rect x="40" y="120" width="470" height="30" rx="0" fill="#ececec" stroke="#444444" stroke-width="1.1"/>
+<text x="52" y="140" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="bold" fill="#1a1a1a" xml:space="preserve" text-anchor="start">Nodo Registro — registro.html</text>
+<rect x="560" y="120" width="470" height="464" rx="0" fill="#ffffff" stroke="#444444" stroke-width="1.1"/>
+<rect x="560" y="120" width="470" height="30" rx="0" fill="#ececec" stroke="#444444" stroke-width="1.1"/>
+<text x="572" y="140" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="bold" fill="#1a1a1a" xml:space="preserve" text-anchor="start">Nodo Servicios — servicios.html</text>
+<rect x="54" y="164" width="442" height="42" rx="0" fill="#ffffff" stroke="#444444" stroke-width="1.1"/>
+<text x="64" y="180" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">Título: «Registro de huésped»</text>
+<text x="64" y="196" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">Texto: al enviar, el sistema le asigna un número</text>
+<rect x="54" y="218" width="442" height="26" rx="0" fill="#f4f4f4" stroke="#444444" stroke-width="1.1"/>
+<text x="64" y="234" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">nombre — texto, obligatorio (name="nombre")</text>
+<rect x="54" y="256" width="442" height="26" rx="0" fill="#f4f4f4" stroke="#444444" stroke-width="1.1"/>
+<text x="64" y="272" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">correo — correo electrónico, obligatorio (name="correo")</text>
+<rect x="54" y="294" width="442" height="26" rx="0" fill="#f4f4f4" stroke="#444444" stroke-width="1.1"/>
+<text x="64" y="310" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">telefono — texto, obligatorio (name="telefono")</text>
+<rect x="54" y="332" width="442" height="26" rx="0" fill="#3a3a3a" stroke="#444444" stroke-width="1.1"/>
+<text x="64" y="348" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#ffffff" xml:space="preserve" text-anchor="start">Botón «Registrarme»  →  envía POST /huespedes</text>
+<rect x="54" y="370" width="442" height="58" rx="0" fill="#e6e6e6" stroke="#444444" stroke-width="1.1"/>
+<text x="64" y="386" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#1a1a1a" xml:space="preserve" text-anchor="start">Envío correcto  →  201 Registro completado</text>
+<text x="64" y="402" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">El servidor genera y muestra el id del huésped</text>
+<text x="64" y="418" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">Enlace hacia el nodo Servicios</text>
+<rect x="54" y="440" width="442" height="42" rx="0" fill="#e6e6e6" stroke="#444444" stroke-width="1.1"/>
+<text x="64" y="456" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#1a1a1a" xml:space="preserve" text-anchor="start">Datos incompletos  →  400 Faltan datos</text>
+<text x="64" y="472" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">No se guarda nada y se ofrece volver al registro</text>
+<rect x="574" y="164" width="442" height="42" rx="0" fill="#ffffff" stroke="#444444" stroke-width="1.1"/>
+<text x="584" y="180" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">Título: «Servicios»</text>
+<text x="584" y="196" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">Lista de servicios y tabla de tarifas por noche</text>
+<rect x="574" y="218" width="442" height="42" rx="0" fill="#ffffff" stroke="#444444" stroke-width="1.1" stroke-dasharray="4 3"/>
+<text x="584" y="234" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">huesped_id — número entregado por el nodo Registro</text>
+<text x="584" y="250" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">Lo vuelve a escribir el usuario, no hay sesión</text>
+<rect x="574" y="272" width="442" height="26" rx="0" fill="#f4f4f4" stroke="#444444" stroke-width="1.1"/>
+<text x="584" y="288" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">fecha_ingreso — fecha, obligatorio</text>
+<rect x="574" y="310" width="442" height="26" rx="0" fill="#f4f4f4" stroke="#444444" stroke-width="1.1"/>
+<text x="584" y="326" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">noches — número entero, mínimo 1</text>
+<rect x="574" y="348" width="442" height="26" rx="0" fill="#f4f4f4" stroke="#444444" stroke-width="1.1"/>
+<text x="584" y="364" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">personas — número entero, mínimo 1</text>
+<rect x="574" y="386" width="442" height="26" rx="0" fill="#3a3a3a" stroke="#444444" stroke-width="1.1"/>
+<text x="584" y="402" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#ffffff" xml:space="preserve" text-anchor="start">Botón «Reservar»  →  envía POST /reservas</text>
+<rect x="574" y="424" width="442" height="58" rx="0" fill="#e6e6e6" stroke="#444444" stroke-width="1.1"/>
+<text x="584" y="440" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#1a1a1a" xml:space="preserve" text-anchor="start">Envío correcto  →  201 Reserva registrada</text>
+<text x="584" y="456" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">Muestra el id de la reserva y repite los datos</text>
+<text x="584" y="472" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">Enlace para registrar otra reserva</text>
+<rect x="574" y="494" width="442" height="42" rx="0" fill="#e6e6e6" stroke="#444444" stroke-width="1.1"/>
+<text x="584" y="510" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#1a1a1a" xml:space="preserve" text-anchor="start">Envío con error  →  400</text>
+<text x="584" y="526" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">Falta un campo, el número no es válido o el huésped no existe</text>
+<rect x="40" y="610" width="990" height="105" rx="0" fill="#ffffff" stroke="#444444" stroke-width="1.1"/>
+<rect x="40" y="610" width="990" height="26" rx="0" fill="#ececec" stroke="#444444" stroke-width="1.1"/>
+<text x="50" y="627" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#1a1a1a" xml:space="preserve" text-anchor="start">Qué escribe el usuario y qué genera el servidor</text>
+<text x="50" y="651" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">Escribe el usuario: nombre, correo, telefono, huesped_id, fecha_ingreso, noches y personas.</text>
+<text x="50" y="668" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">Genera el servidor: el id del huésped y el id de la reserva, con lastInsertRowid de SQLite.</text>
+<text x="50" y="685" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">Se conserva entre nodos: el id del huésped, que el usuario copia en el formulario de reserva.</text>
+<text x="50" y="702" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">Este modelo no define colores ni tipografías; esas decisiones pertenecen a styles.css.</text>
+</svg>

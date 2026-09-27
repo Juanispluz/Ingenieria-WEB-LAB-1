@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="450" viewBox="0 0 900 450">
+<defs>
+<marker id="pf" markerWidth="9" markerHeight="9" refX="8.5" refY="4.5" orient="auto" markerUnits="userSpaceOnUse">
+<path d="M0,0 L9,4.5 L0,9 z" fill="#444444"/>
+</marker>
+</defs>
+<rect x="0" y="0" width="900" height="450" fill="#ffffff"/>
+<text x="450.0" y="32" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" fill="#1a1a1a" xml:space="preserve" text-anchor="middle">OOHDM · 1. Diseño conceptual — Hotel Las Palmas</text>
+<text x="450.0" y="54" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#555555" xml:space="preserve" text-anchor="middle">¿Qué información maneja la plataforma y cómo se relaciona?</text>
+<rect x="60" y="110" width="320" height="105" rx="0" fill="#ffffff" stroke="#444444" stroke-width="1.1"/>
+<rect x="60" y="110" width="320" height="26" rx="0" fill="#ececec" stroke="#444444" stroke-width="1.1"/>
+<text x="70" y="127" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#1a1a1a" xml:space="preserve" text-anchor="start">Huésped</text>
+<text x="70" y="151" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">id : INTEGER  «identificador»</text>
+<text x="70" y="168" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">nombre : TEXT</text>
+<text x="70" y="185" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">correo : TEXT</text>
+<text x="70" y="202" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">telefono : TEXT</text>
+<rect x="520" y="110" width="320" height="122" rx="0" fill="#ffffff" stroke="#444444" stroke-width="1.1"/>
+<rect x="520" y="110" width="320" height="26" rx="0" fill="#ececec" stroke="#444444" stroke-width="1.1"/>
+<text x="530" y="127" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#1a1a1a" xml:space="preserve" text-anchor="start">Reserva</text>
+<text x="530" y="151" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">id : INTEGER  «identificador»</text>
+<text x="530" y="168" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">huesped_id : INTEGER  «enlace»</text>
+<text x="530" y="185" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">fecha_ingreso : TEXT</text>
+<text x="530" y="202" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">noches : INTEGER</text>
+<text x="530" y="219" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">personas : INTEGER</text>
+<line x1="380" y1="180" x2="520" y2="180" stroke="#444444" stroke-width="1.1"/>
+<text x="450" y="172" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="middle">solicita</text>
+<path d="M462,176 L474,180 L462,184 z" fill="#444444"/>
+<text x="387" y="197" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">1</text>
+<text x="513" y="197" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="end">0..*</text>
+<rect x="60" y="300" width="780" height="105" rx="0" fill="#ffffff" stroke="#444444" stroke-width="1.1"/>
+<rect x="60" y="300" width="780" height="26" rx="0" fill="#ececec" stroke="#444444" stroke-width="1.1"/>
+<text x="70" y="317" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#1a1a1a" xml:space="preserve" text-anchor="start">Reglas del dominio</text>
+<text x="70" y="341" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">Un huésped se registra una sola vez y el sistema le entrega un identificador propio.</text>
+<text x="70" y="358" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">Un huésped puede no tener reservas todavía o tener varias: por eso 0..*.</text>
+<text x="70" y="375" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">Una reserva pertenece siempre a un único huésped ya registrado: por eso 1.</text>
+<text x="70" y="392" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">La reserva no repite el nombre, el correo ni el teléfono; solo guarda el enlace huesped_id.</text>
+</svg>

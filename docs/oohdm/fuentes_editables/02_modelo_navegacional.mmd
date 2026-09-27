@@ -1,0 +1,27 @@
+%% OOHDM 2 - Diseno navegacional - Hotel Las Palmas
+%% Fuente editable del diagrama 02_modelo_navegacional.svg
+flowchart TD
+    MENU["Estructura de acceso: Menu<br/>Inicio - Acerca de - Registro - Servicios"]
+    INICIO["Nodo Inicio<br/>GET / -- index.html"]
+    ACERCA["Nodo Acerca de<br/>GET /acerca -- acerca.html"]
+    REGISTRO["Nodo Registro<br/>GET /registro -- registro.html<br/>Formulario: nombre, correo, telefono"]
+    RESP1["Respuesta: Registro completado 201<br/>Muestra el id_huesped"]
+    SERVICIOS["Nodo Servicios<br/>GET /servicios -- servicios.html<br/>Formulario de reserva"]
+    RESP2["Respuesta: Reserva registrada 201<br/>Muestra id_reserva y huesped_id"]
+    ERR1["Respuesta: Datos incompletos 400"]
+    ERR2["Respuesta: error en la reserva 400"]
+
+    MENU --> INICIO
+    MENU --> ACERCA
+    MENU --> REGISTRO
+    MENU --> SERVICIOS
+
+    INICIO -->|registrarse| REGISTRO
+    REGISTRO -->|"registrar: POST /huespedes"| RESP1
+    REGISTRO -.->|400| ERR1
+    ERR1 -.->|volver al registro| REGISTRO
+    RESP1 -->|"ir a solicitar la reserva, lleva el id_huesped"| SERVICIOS
+    SERVICIOS -->|"reservar: POST /reservas"| RESP2
+    SERVICIOS -.->|400| ERR2
+    ERR2 -.->|volver a servicios| SERVICIOS
+    RESP2 -.->|registrar otra reserva| SERVICIOS

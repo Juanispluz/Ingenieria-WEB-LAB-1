@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1110" height="710" viewBox="0 0 1110 710">
+<defs>
+<marker id="pf" markerWidth="9" markerHeight="9" refX="8.5" refY="4.5" orient="auto" markerUnits="userSpaceOnUse">
+<path d="M0,0 L9,4.5 L0,9 z" fill="#444444"/>
+</marker>
+</defs>
+<rect x="0" y="0" width="1110" height="710" fill="#ffffff"/>
+<text x="555.0" y="32" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" fill="#1a1a1a" xml:space="preserve" text-anchor="middle">OOHDM · 4. Implementación — Hotel Las Palmas</text>
+<text x="555.0" y="54" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#555555" xml:space="preserve" text-anchor="middle">¿Cómo se materializan los tres modelos con HTML, CSS, Node.js, HTTP y SQLite?</text>
+<rect x="40" y="90" width="250" height="40" rx="0" fill="#ffffff" stroke="#444444" stroke-width="1.1"/>
+<text x="165" y="115" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#1a1a1a" xml:space="preserve" text-anchor="middle">Usuario (huésped)</text>
+<line x1="165" y1="130" x2="165" y2="168" stroke="#444444" stroke-width="1.1" marker-end="url(#pf)"/>
+<rect x="40" y="168" width="250" height="122" rx="0" fill="#ffffff" stroke="#444444" stroke-width="1.1"/>
+<rect x="40" y="168" width="250" height="26" rx="0" fill="#ececec" stroke="#444444" stroke-width="1.1"/>
+<text x="50" y="185" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#1a1a1a" xml:space="preserve" text-anchor="start">Navegador</text>
+<text x="50" y="209" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">Pide las páginas y muestra el HTML</text>
+<text x="50" y="226" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">index.html · acerca.html</text>
+<text x="50" y="243" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">registro.html · servicios.html</text>
+<text x="50" y="260" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">styles.css (text/css)</text>
+<text x="50" y="277" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">Envía los formularios con POST</text>
+<rect x="410" y="160" width="360" height="300" rx="0" fill="#ffffff" stroke="#444444" stroke-width="1.1"/>
+<rect x="410" y="160" width="360" height="30" rx="0" fill="#ececec" stroke="#444444" stroke-width="1.1"/>
+<text x="422" y="180" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="bold" fill="#1a1a1a" xml:space="preserve" text-anchor="start">server.js — Node.js 24, módulo node:http</text>
+<text x="422" y="208" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">Escucha en el puerto 3000</text>
+<rect x="426" y="224" width="328" height="165" rx="0" fill="#ffffff" stroke="#444444" stroke-width="1.1"/>
+<rect x="426" y="224" width="328" height="26" rx="0" fill="#ececec" stroke="#444444" stroke-width="1.1"/>
+<text x="436" y="241" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#1a1a1a" xml:space="preserve" text-anchor="start">Rutas atendidas</text>
+<text x="436" y="265" font-family="Menlo, Consolas, monospace" font-size="10.5" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">GET  /             -&gt;  index.html</text>
+<text x="436" y="281" font-family="Menlo, Consolas, monospace" font-size="10.5" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">GET  /acerca       -&gt;  acerca.html</text>
+<text x="436" y="297" font-family="Menlo, Consolas, monospace" font-size="10.5" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">GET  /registro     -&gt;  registro.html</text>
+<text x="436" y="313" font-family="Menlo, Consolas, monospace" font-size="10.5" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">GET  /servicios    -&gt;  servicios.html</text>
+<text x="436" y="329" font-family="Menlo, Consolas, monospace" font-size="10.5" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">GET  /styles.css   -&gt;  styles.css</text>
+<text x="436" y="345" font-family="Menlo, Consolas, monospace" font-size="10.5" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">POST /huespedes    -&gt;  INSERT huespedes</text>
+<text x="436" y="361" font-family="Menlo, Consolas, monospace" font-size="10.5" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">POST /reservas     -&gt;  INSERT reservas</text>
+<text x="436" y="377" font-family="Menlo, Consolas, monospace" font-size="10.5" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">cualquier otra     -&gt;  404</text>
+<text x="422" y="407" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">Valida los campos y responde 400 si falta alguno.</text>
+<text x="422" y="424" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">Responde 201 y el id cuando el INSERT sale bien.</text>
+<text x="422" y="441" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">La función pagina() arma el HTML de cada respuesta.</text>
+<rect x="850" y="160" width="220" height="88" rx="0" fill="#ffffff" stroke="#444444" stroke-width="1.1"/>
+<rect x="850" y="160" width="220" height="26" rx="0" fill="#ececec" stroke="#444444" stroke-width="1.1"/>
+<text x="860" y="177" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#1a1a1a" xml:space="preserve" text-anchor="start">node:sqlite</text>
+<text x="860" y="201" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">DatabaseSync abre hotel.db</text>
+<text x="860" y="218" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">Sentencias con prepare()</text>
+<text x="860" y="235" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">Los datos van como parámetros ?</text>
+<rect x="850" y="266" width="220" height="262" rx="0" fill="#ffffff" stroke="#444444" stroke-width="1.1"/>
+<rect x="850" y="266" width="220" height="30" rx="0" fill="#ececec" stroke="#444444" stroke-width="1.1"/>
+<text x="862" y="286" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="bold" fill="#1a1a1a" xml:space="preserve" text-anchor="start">hotel.db  (SQLite)</text>
+<rect x="864" y="308" width="192" height="97" rx="0" fill="#ffffff" stroke="#444444" stroke-width="1.1"/>
+<rect x="864" y="308" width="192" height="26" rx="0" fill="#ececec" stroke="#444444" stroke-width="1.1"/>
+<text x="874" y="325" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="bold" fill="#1a1a1a" xml:space="preserve" text-anchor="start">huespedes</text>
+<text x="874" y="349" font-family="Menlo, Consolas, monospace" font-size="10.5" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">id</text>
+<text x="874" y="364" font-family="Menlo, Consolas, monospace" font-size="10.5" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">nombre</text>
+<text x="874" y="379" font-family="Menlo, Consolas, monospace" font-size="10.5" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">correo</text>
+<text x="874" y="394" font-family="Menlo, Consolas, monospace" font-size="10.5" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">telefono</text>
+<rect x="864" y="406" width="192" height="112" rx="0" fill="#ffffff" stroke="#444444" stroke-width="1.1"/>
+<rect x="864" y="406" width="192" height="26" rx="0" fill="#ececec" stroke="#444444" stroke-width="1.1"/>
+<text x="874" y="423" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="bold" fill="#1a1a1a" xml:space="preserve" text-anchor="start">reservas</text>
+<text x="874" y="447" font-family="Menlo, Consolas, monospace" font-size="10.5" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">id</text>
+<text x="874" y="462" font-family="Menlo, Consolas, monospace" font-size="10.5" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">huesped_id</text>
+<text x="874" y="477" font-family="Menlo, Consolas, monospace" font-size="10.5" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">fecha_ingreso</text>
+<text x="874" y="492" font-family="Menlo, Consolas, monospace" font-size="10.5" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">noches</text>
+<text x="874" y="507" font-family="Menlo, Consolas, monospace" font-size="10.5" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">personas</text>
+<line x1="290" y1="212" x2="410" y2="212" stroke="#444444" stroke-width="1.1" marker-end="url(#pf)"/>
+<text x="350" y="204" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="normal" fill="#555555" xml:space="preserve" text-anchor="middle">petición HTTP</text>
+<text x="350" y="194" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="normal" fill="#555555" xml:space="preserve" text-anchor="middle">GET y POST</text>
+<line x1="410" y1="252" x2="290" y2="252" stroke="#444444" stroke-width="1.1" marker-end="url(#pf)"/>
+<text x="350" y="268" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="normal" fill="#555555" xml:space="preserve" text-anchor="middle">respuesta HTML</text>
+<text x="350" y="280" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="normal" fill="#555555" xml:space="preserve" text-anchor="middle">200 · 201 · 400 · 404</text>
+<line x1="770" y1="196" x2="850" y2="196" stroke="#444444" stroke-width="1.1" marker-end="url(#pf)"/>
+<text x="810" y="188" font-family="Helvetica, Arial, sans-serif" font-size="9.5" font-weight="normal" fill="#555555" xml:space="preserve" text-anchor="middle">run() / get()</text>
+<line x1="850" y1="218" x2="770" y2="218" stroke="#444444" stroke-width="1.1" marker-end="url(#pf)"/>
+<text x="810" y="233" font-family="Helvetica, Arial, sans-serif" font-size="9.5" font-weight="normal" fill="#555555" xml:space="preserve" text-anchor="middle">filas y el id</text>
+<line x1="960" y1="249" x2="960" y2="266" stroke="#444444" stroke-width="1.1" marker-end="url(#pf)"/>
+<rect x="40" y="560" width="1030" height="117" rx="0" fill="#ffffff" stroke="#444444" stroke-width="1.1"/>
+<rect x="40" y="560" width="1030" height="26" rx="0" fill="#ececec" stroke="#444444" stroke-width="1.1"/>
+<text x="50" y="577" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#1a1a1a" xml:space="preserve" text-anchor="start">Correspondencia entre los modelos y el código</text>
+<text x="50" y="601" font-family="Menlo, Consolas, monospace" font-size="10.5" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">Clase Huésped      -&gt;  tabla huespedes     -&gt;  POST /huespedes  -&gt;  INSERT INTO huespedes</text>
+<text x="50" y="617" font-family="Menlo, Consolas, monospace" font-size="10.5" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">Clase Reserva      -&gt;  tabla reservas      -&gt;  POST /reservas   -&gt;  INSERT INTO reservas</text>
+<text x="50" y="633" font-family="Menlo, Consolas, monospace" font-size="10.5" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">Nodo Registro      -&gt;  GET /registro       -&gt;  registro.html    -&gt;  formulario del huésped</text>
+<text x="50" y="649" font-family="Menlo, Consolas, monospace" font-size="10.5" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">Nodo Servicios     -&gt;  GET /servicios      -&gt;  servicios.html   -&gt;  formulario de la reserva</text>
+<text x="50" y="665" font-family="Menlo, Consolas, monospace" font-size="10.5" font-weight="normal" fill="#1a1a1a" xml:space="preserve" text-anchor="start">Relación 1 a 0..*  -&gt;  columna huesped_id  -&gt;  SELECT id FROM huespedes WHERE id = ?</text>
+</svg>

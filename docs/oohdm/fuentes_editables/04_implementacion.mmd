@@ -1,0 +1,15 @@
+%% OOHDM 4 - Implementacion - Hotel Las Palmas
+%% Fuente editable del diagrama 04_implementacion.svg
+flowchart LR
+    U["Usuario (huesped)"]
+    N["Navegador<br/>index.html, acerca.html,<br/>registro.html, servicios.html,<br/>styles.css"]
+    S["server.js<br/>Node.js 24 - modulo node:http<br/>puerto 3000"]
+    Q["node:sqlite<br/>DatabaseSync y prepare()"]
+    D[("hotel.db<br/>tabla huespedes<br/>tabla reservas")]
+
+    U --> N
+    N -->|"GET y POST"| S
+    S -->|"HTML 200 / 201 / 400 / 404"| N
+    S -->|"run() y get() con parametros ?"| Q
+    Q -->|"filas y lastInsertRowid"| S
+    Q --> D

@@ -1,6 +1,7 @@
 # Hotel Las Palmas
 
-Práctica evaluativa del 20 % de la asignatura Ingeniería Web.
+Prácticas evaluativas de la asignatura Ingeniería Web: la plataforma Web
+del 20 % y la aplicación de la metodología OOHDM del 10 %.
 
 - **Autor:** Juan Ramírez Herrera
 - **Asignatura:** Ingeniería Web
@@ -23,6 +24,42 @@ El sitio tiene dos formularios:
   obtenido antes, la fecha de ingreso, el número de noches y el número de
   personas. El servidor guarda esos datos en la tabla `reservas`. No vuelve a
   pedir el nombre, el correo ni el teléfono porque ya están guardados.
+
+## Documentación OOHDM (práctica del 10 %)
+
+La metodología **OOHDM** se aplicó sobre esta misma plataforma, sin agregar
+CRUD, autenticación, formularios ni tablas nuevas. Toda la documentación está
+en **[`docs/oohdm/OOHDM.md`](docs/oohdm/OOHDM.md)**.
+
+| Modelo OOHDM | Qué pregunta responde | Con qué se corresponde en este proyecto | Diagrama |
+|---|---|---|---|
+| 1. Diseño conceptual | ¿Qué información maneja la plataforma? | Las clases **Huésped** y **Reserva**, que son las tablas `huespedes` y `reservas` de `hotel.db`. | [`01_modelo_conceptual.svg`](docs/oohdm/01_modelo_conceptual.svg) |
+| 2. Diseño navegacional | ¿Qué nodos visita el usuario? | Las rutas `GET /`, `/acerca`, `/registro`, `/servicios` y las respuestas de los dos `POST`. | [`02_modelo_navegacional.svg`](docs/oohdm/02_modelo_navegacional.svg) |
+| 3. Interfaz abstracta | ¿Qué contiene cada nodo? | Los campos de `registro.html` y `servicios.html`, y las respuestas `201` y `400`. | [`03_interfaz_abstracta.svg`](docs/oohdm/03_interfaz_abstracta.svg) |
+| 4. Implementación | ¿Con qué tecnologías se hace? | `styles.css`, `server.js` con `node:http`, y `hotel.db` con `node:sqlite`. | [`04_implementacion.svg`](docs/oohdm/04_implementacion.svg) |
+
+`OOHDM.md` incluye además la **matriz de correspondencia**, que relaciona cada
+elemento de los modelos con su ruta, su archivo, su tabla o campo y la
+evidencia que se puede comprobar ejecutando `node server.js`.
+
+Las fuentes editables de los cuatro diagramas están en
+[`docs/oohdm/fuentes_editables/`](docs/oohdm/fuentes_editables) en formato
+Mermaid (`.mmd`), y el mismo código está copiado dentro de `OOHDM.md`.
+
+### Relación con la plataforma
+
+Los cuatro modelos describen esta plataforma y ninguna otra: usan los mismos
+nombres de rutas, de formularios, de tablas y de campos que están escritos en
+el código. El recorrido que dibuja el modelo navegacional es exactamente el
+que describe la sección [Orden de uso](#orden-de-uso): el huésped se registra,
+el servidor le devuelve un identificador y ese identificador es el que enlaza
+la reserva con su huésped en la columna `huesped_id`.
+
+Al revisar los diagramas contra el código no apareció ninguna inconsistencia,
+así que la aplicación se conservó igual que en la práctica del 20 %. Las dos
+observaciones que sí quedaron anotadas (que la relación se garantiza desde
+`server.js` y no con `FOREIGN KEY`, y que el identificador se conserva de
+forma manual) están explicadas en la sección 6 de `OOHDM.md`.
 
 ## Tecnologías utilizadas
 
@@ -47,7 +84,21 @@ practica-hotel/
 ├── styles.css
 ├── server.js
 ├── hotel.db
-└── README.md
+├── README.md
+├── capturas/
+│   └── 01-inicio.png ... 10-tabla-reservas.png
+└── docs/
+    └── oohdm/
+        ├── OOHDM.md
+        ├── 01_modelo_conceptual.svg
+        ├── 02_modelo_navegacional.svg
+        ├── 03_interfaz_abstracta.svg
+        ├── 04_implementacion.svg
+        └── fuentes_editables/
+            ├── 01_modelo_conceptual.mmd
+            ├── 02_modelo_navegacional.mmd
+            ├── 03_interfaz_abstracta.mmd
+            └── 04_implementacion.mmd
 ```
 
 | Archivo | Descripción |
@@ -59,6 +110,8 @@ practica-hotel/
 | `styles.css` | Hoja de estilos compartida por las cuatro páginas. |
 | `server.js` | Servidor: rutas GET y POST, validación e inserciones. |
 | `hotel.db` | Base de datos SQLite con las dos tablas. |
+| `capturas/` | Capturas de pantalla de la práctica del 20 %. |
+| `docs/oohdm/` | Documentación OOHDM de la práctica del 10 %. |
 
 ## Rutas
 

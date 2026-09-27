@@ -1,0 +1,29 @@
+%% OOHDM 3 - Diseno de interfaz abstracta - Hotel Las Palmas
+%% Fuente editable del diagrama 03_interfaz_abstracta.svg
+flowchart TB
+    subgraph REG["Nodo Registro - registro.html"]
+        direction TB
+        R1["Informacion visible:<br/>titulo y texto de ayuda"]
+        R2["Campos de entrada:<br/>nombre, correo, telefono"]
+        R3(["Boton Registrarme -- evento POST /huespedes"])
+        R4["Respuesta 201: Registro completado<br/>el servidor genera y muestra el id"]
+        R5["Respuesta 400: Faltan datos"]
+        R1 --> R2 --> R3
+        R3 --> R4
+        R3 --> R5
+    end
+
+    subgraph SER["Nodo Servicios - servicios.html"]
+        direction TB
+        S1["Informacion visible:<br/>servicios y tabla de tarifas"]
+        S2["Dato conservado:<br/>huesped_id"]
+        S3["Campos de entrada:<br/>fecha_ingreso, noches, personas"]
+        S4(["Boton Reservar -- evento POST /reservas"])
+        S5["Respuesta 201: Reserva registrada"]
+        S6["Respuesta 400: datos invalidos o huesped inexistente"]
+        S1 --> S2 --> S3 --> S4
+        S4 --> S5
+        S4 --> S6
+    end
+
+    R4 -->|"el usuario lleva el id al otro formulario"| S2
